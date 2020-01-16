@@ -6,8 +6,6 @@ if [ -f /etc/redhat-release ]; then
     sudo yum clean all && yum makecache fast
     sudo yum -y install docker-ce
     sudo systemctl restart docker
-    sudo yum clean all 
-    sudo yum makecache
 fi
 
 if [ -f /etc/lsb-release ]; then
