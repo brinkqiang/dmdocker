@@ -3,7 +3,7 @@
 if [ -f /etc/redhat-release ]; then
     sudo yum -y install yum-utils
     sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-    sudo yum clean all && yum makecache fast
+    sudo yum makecache fast
     sudo yum -y install docker-ce
     sudo systemctl restart docker
 fi
