@@ -13,6 +13,9 @@ if [ -f /etc/lsb-release ]; then
     sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
     sudo apt -y update
     sudo apt -y install docker-ce
+    sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
+    sudo apt -y install python3 python3-pip
+    pip3 install --user docker-compose
     sudo systemctl restart docker
 fi
 
